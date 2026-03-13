@@ -1,4 +1,5 @@
 import { storyblokEditable, StoryblokRichText } from "@storyblok/react/rsc";
+import Image from "next/image";
 
 const Hero = ({ blok }: any) => {
   const hasImage = blok.image && blok.image.filename;
@@ -12,10 +13,13 @@ const Hero = ({ blok }: any) => {
     >
       {/* Full-bleed Background Image with Cache Buster */}
       {hasImage ? (
-        <img
+        <Image
           src={imageUrl}
           alt={blok.image.alt || "Hero background"}
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
+          unoptimized
         />
       ) : (
         <div className="absolute inset-0 w-full h-full bg-gray-800 flex items-center justify-center">

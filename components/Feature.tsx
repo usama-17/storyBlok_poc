@@ -9,7 +9,7 @@ const Feature = ({ blok }: any) => (
     </div>
     <h3 className="text-lg font-semibold leading-7 text-gray-900">{blok.name}</h3>
     <p className="mt-2 text-base leading-7 text-gray-600">
-      Fully integrated with Storyblok's visual editor. Update this content in real-time.
+      Fully integrated with Storyblok&apos;s visual editor. Update this content in real-time.
     </p>
   </div>
 );
